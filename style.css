@@ -1,0 +1,213 @@
+/* --- CSS STYLES --- */
+:root {
+    --primary-color: #00d4ff; 
+    --bg-color: #0f172a;      
+    --card-bg: #1e293b;       
+    --text-color: #e2e8f0;    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: rgba(15, 23, 42, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #334155;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: #0f172a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Laptop Navigation */
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* HAMBURGER MENU (Hidden on Laptop) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--text-color);
+    transition: 0.3s;
+}
+/* Add this to style.css */
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;        /* Makes it circular */
+    border: 4px solid var(--primary-color); /* Adds the blue glow border */
+    margin-bottom: 20px;       /* Space between photo and text */
+    object-fit: cover;         /* Ensures face isn't stretched */
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); /* Soft glow */
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 50px;
+}
+
+
+
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+.hero h1 span { color: var(--primary-color); }
+.hero p { font-size: 1.2rem; max-width: 600px; color: #94a3b8; }
+.typing-text { color: var(--primary-color); font-weight: bold; margin-top: 10px; }
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+.btn:hover { transform: scale(1.05); }
+
+/* SECTIONS */
+section { padding: 80px 10%; }
+h2 { font-size: 2rem; margin-bottom: 30px; border-left: 5px solid var(--primary-color); padding-left: 15px; }
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+}
+
+.skill-card, .card, .coming-soon {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #020617;
+    color: #64748b;
+    margin-top: 50px;
+    border-top: 1px solid #1e293b;
+}
+
+.contact-link { color: var(--primary-color); text-decoration: none; font-weight: bold; }
+
+/* =========================================
+   MOBILE VIEW (Right Side Half-Menu)
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* 1. Show the Hamburger Button */
+    .hamburger {
+        display: block;
+    }
+
+    /* 2. Style the dropdown menu to sit on the right */
+    .nav-links {
+        display: none; /* Hidden by default */
+        
+        position: absolute;
+        top: 100%;  /* Pushes it below the navbar */
+        right: 0;   /* Anchors it to the RIGHT side */
+        left: auto; /* Stops it from stretching to the left */
+        
+        width: 50%; /* Takes up HALF the screen width */
+        height: auto; /* Let it grow naturally based on content */
+        
+        background-color: rgba(15, 23, 42, 0.98);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+        
+        /* Add a border and round the bottom-left corner */
+        border-bottom: 1px solid #334155;
+        border-left: 1px solid #334155;
+        border-bottom-left-radius: 10px; 
+    }
+
+    /* 3. Show the menu when active */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 0;
+        font-size: 1.1rem;
+        display: block;
+    }
+
+    /* General Mobile Fixes */
+    nav { padding: 20px 5%; }
+    section { padding: 50px 5%; }
+    .hero h1 { font-size: 2rem; }
+}
