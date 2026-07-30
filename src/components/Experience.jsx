@@ -1,12 +1,12 @@
 const TIMELINE = [
   {
-    tag: 'June 2026 - Present',
+    tag: 'June 2026 - July 2026',
     title: 'Software Engineering Intern',
     org: 'EdZola Technologies, Coimbatore, TN',
     bullets: [
-      'Building web/application features using JavaScript, HTML, and CSS.',
-      'Working with MySQL to configure and query data for internal reporting.',
-      'Supporting a live engineering team at a technology-for-social-impact company.',
+      'Built web/application features using JavaScript, HTML, and CSS.',
+      'Worked with MySQL to configure and query data for internal reporting.',
+      'Supported a live engineering team at a technology-for-social-impact company.',
     ],
   },
   {

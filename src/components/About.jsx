@@ -11,9 +11,9 @@ function About() {
         interfaces with <strong>JavaScript and Web Development</strong>.
         <br />
         <br />
-        I am currently working as a Software Engineering Intern at{' '}
-        <strong>EdZola Technologies</strong>, where I build web application features using
-        JavaScript, HTML, and CSS, and work with MySQL for internal reporting.
+        I recently completed a Software Engineering Internship at{' '}
+        <strong>EdZola Technologies</strong>, where I built web application features using
+        JavaScript, HTML, and CSS, and worked with MySQL for internal reporting.
       </p>
     </section>
   );
