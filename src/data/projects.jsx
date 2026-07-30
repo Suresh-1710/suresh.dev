@@ -1,5 +1,32 @@
 export const PROJECTS = [
   {
+    slug: 'beat-the-clock',
+    title: 'Beat the Clock ⏰',
+    summary: (
+      <>
+        A game-based alarm clock app designed to tackle oversleeping by forcing users to wake up,
+        engage their brain, and solve puzzles/challenges to turn the alarm off.
+      </>
+    ),
+    liveUrl: 'https://beat-the-clock-then-sleep.vercel.app/',
+    repoUrl: 'https://github.com/Suresh-1710/beat-the-clock.git',
+    extraDesc: (
+      <>
+        Built as part of a hackathon organized by EdZola Technologies. The project features native
+        Android integration for background alarm persistence, custom key event interception to
+        block hardware volume buttons, and an auto-update mechanism.
+      </>
+    ),
+    meta: [
+      { label: 'Tech Stack', value: 'Android (Java), XML, Vercel' },
+      {
+        label: 'Key Features',
+        value:
+          'Un-cheatable alarm (AlarmManager background services), Volume Lock (hardware button block), Custom in-app auto-updater',
+      },
+    ],
+  },
+  {
     slug: 'vijaya-tailoring-shop',
     title: 'Vijaya Tailoring Shop',
     summary: (
