@@ -12,9 +12,8 @@ export const PROJECTS = [
     repoUrl: 'https://github.com/Suresh-1710/beat-the-clock.git',
     extraDesc: (
       <>
-        Built as part of a hackathon organized by EdZola Technologies. The project features native
-        Android integration for background alarm persistence, custom key event interception to
-        block hardware volume buttons, and an auto-update mechanism.
+        The project features native Android integration for background alarm persistence, custom key
+        event interception to block hardware volume buttons, and an auto-update mechanism.
       </>
     ),
     meta: [
