@@ -43,14 +43,28 @@ function ProjectsPage() {
               >
                 View Live Website
               </a>
-              <a
-                href={project.repoUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-secondary"
-              >
-                View Source Code
-              </a>
+              {project.repoUrls ? (
+                project.repoUrls.map((repo) => (
+                  <a
+                    key={repo.url}
+                    href={repo.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-secondary"
+                  >
+                    {repo.label}
+                  </a>
+                ))
+              ) : (
+                <a
+                  href={project.repoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-secondary"
+                >
+                  View Source Code
+                </a>
+              )}
             </div>
           </div>
         ))}

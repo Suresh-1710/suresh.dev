@@ -1,5 +1,45 @@
 export const PROJECTS = [
   {
+    slug: 'local-emergency-service-connect',
+    title: 'Local Emergency Service Connect 🛠️',
+    summary: (
+      <>
+        A location-aware, two-sided marketplace designed to bridge the gap between clients with
+        immediate emergency issues (plumbing, electrical, carpentry) and local technicians.
+      </>
+    ),
+    liveUrl: 'https://local-emergency-service-web.onrender.com/',
+    repoUrls: [
+      {
+        label: 'Frontend Repo',
+        url: 'https://github.com/Suresh-1710/local-emergency-service-frontend.git',
+      },
+      {
+        label: 'Backend Repo',
+        url: 'https://github.com/Suresh-1710/local-emergency-service-backend.git',
+      },
+    ],
+    extraDesc: (
+      <>
+        Developed end-to-end during a 3-week Software Engineering internship at EdZola Technologies.
+        It features geospatial proximity filtering using the Haversine formula to search for jobs within
+        a 5 km radius, concurrency safety via PostgreSQL row-level locks to prevent double-bookings,
+        and a visibility-aware polling system with Web Notifications for real-time updates.
+      </>
+    ),
+    meta: [
+      {
+        label: 'Tech Stack',
+        value: 'FastAPI, React (Vite), PostgreSQL, SQLAlchemy, JWT, Cloudinary, LocationIQ',
+      },
+      {
+        label: 'Key Features',
+        value:
+          'Geospatial proximity filtering (Haversine formula), PostgreSQL row-level locks (concurrency safety), visibility-aware polling, Web Notifications, Cloudinary image hosting',
+      },
+    ],
+  },
+  {
     slug: 'beat-the-clock',
     title: 'Beat the Clock ⏰',
     summary: (

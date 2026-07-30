@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function ProjectCard({ slug, title, summary, liveUrl, repoUrl, extraDesc, meta }) {
+function ProjectCard({ slug, title, summary, liveUrl, repoUrl, repoUrls, extraDesc, meta }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -38,9 +38,17 @@ function ProjectCard({ slug, title, summary, liveUrl, repoUrl, extraDesc, meta }
         <a href={liveUrl} target="_blank" rel="noreferrer" className="btn btn-primary">
           View Live Website
         </a>
-        <a href={repoUrl} target="_blank" rel="noreferrer" className="btn btn-secondary">
-          View Source Code
-        </a>
+        {repoUrls ? (
+          repoUrls.map((repo) => (
+            <a key={repo.url} href={repo.url} target="_blank" rel="noreferrer" className="btn btn-secondary">
+              {repo.label}
+            </a>
+          ))
+        ) : (
+          <a href={repoUrl} target="_blank" rel="noreferrer" className="btn btn-secondary">
+            View Source Code
+          </a>
+        )}
       </div>
     </div>
   );
