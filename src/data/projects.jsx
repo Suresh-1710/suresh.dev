@@ -21,7 +21,6 @@ export const PROJECTS = [
     ],
     extraDesc: (
       <>
-        Developed end-to-end during a 3-week Software Engineering internship at EdZola Technologies.
         It features geospatial proximity filtering using the Haversine formula to search for jobs within
         a 5 km radius, concurrency safety via PostgreSQL row-level locks to prevent double-bookings,
         and a visibility-aware polling system with Web Notifications for real-time updates.
